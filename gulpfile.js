@@ -22,6 +22,8 @@ var env,
     sassStyle;
 
 env = process.env.NODE_ENV || 'development';
+//NODE_ENV=production gulp
+//for production
 
 if (env==='development') {
   outputDir = 'builds/development/';

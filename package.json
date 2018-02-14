@@ -1,7 +1,7 @@
 {
   "name": "WWWebwork",
   "version": "0.0.1",
-  "description": "Web workflow with Gulp, Browserify, Coffee Script and Compass ",
+  "description": "Web workflow with Gulp, Browserify, Coffee Script and Compass, Bootstrap 4.0 Jumbotron",
   "repository": {
     "type": "git",
     "url": "https://github.com/gagdmac/WWWebwork.git"

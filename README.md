@@ -1,5 +1,5 @@
 # Gulp.js, Git, and Browserify: Web Project Workflows
-This is the repository for my course Gulp.js, Git, and Browserify: Web Project Workflows.
+Web workflow with Gulp, Browserify, Coffee Script and Compass, Bootstrap 4.0 Jumbotron
 
 ## Installing
 1. Make sure you have these installed

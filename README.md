@@ -10,4 +10,4 @@ Web workflow with Gulp, Browserify, Coffee Script and Compass, Bootstrap 4.0 Jum
 3. CD to the folder `cd FOLDERNAME`
 4. Run `> npm install` to install the project dependencies
 5. Run `> gulp` to start live preview server
-6. Run production`> gulp` to start live production preview server
+6. Run production`> NODE_ENV=production gulp` to start live production preview server

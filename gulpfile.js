@@ -37,6 +37,13 @@ jsSources = [
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
+gulp.task('html', function() {
+  gulp.src('builds/development/*.html')
+    .pipe(gulpif(env === 'production', minifyHTML()))
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+    .pipe(connect.reload())
+});
+
 gulp.task('js', function() {
   gulp.src(jsSources)
     .pipe(concat('script.js'))
@@ -58,27 +65,6 @@ gulp.task('compass', function() {
     .pipe(connect.reload())
 });
 
-gulp.task('watch', function() {
-  gulp.watch(jsSources, ['js']);
-  gulp.watch('components/sass/*.scss', ['compass']);
-  gulp.watch('builds/development/*.html', ['html']);
-  gulp.watch('builds/development/images/**/*.*', ['images']);
-});
-
-gulp.task('connect', function() {
-  connect.server({
-    root: outputDir,
-    livereload: true
-  });
-});
-
-gulp.task('html', function() {
-  gulp.src('builds/development/*.html')
-    .pipe(gulpif(env === 'production', minifyHTML()))
-    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
-    .pipe(connect.reload())
-});
-
 gulp.task('images', function() {
   gulp.src('builds/development/images/**/*.*')
     .pipe(gulpif(env === 'production', imagemin({
@@ -88,6 +74,20 @@ gulp.task('images', function() {
     })))
     .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
     .pipe(connect.reload())
+});
+
+gulp.task('connect', function() {
+  connect.server({
+    root: outputDir,
+    livereload: true
+  });
+});
+
+gulp.task('watch', function() {
+  gulp.watch(jsSources, ['js']);
+  gulp.watch('components/sass/*.scss', ['compass']);
+  gulp.watch('builds/development/*.html', ['html']);
+  gulp.watch('builds/development/images/**/*.*', ['images']);
 });
 
 

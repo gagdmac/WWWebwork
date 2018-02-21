@@ -1,29 +1,23 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
-    jsonminify = require('gulp-jsonminify'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
     concat = require('gulp-concat');
 
 var env,
-    coffeeSources,
     jsSources,
     sassSources,
     htmlSources,
-    jsonSources,
     outputDir,
     sassStyle;
 
 env = process.env.NODE_ENV || 'development';
-//NODE_ENV=production gulp
-//for production
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -34,7 +28,6 @@ if (env==='development') {
 }
 
 
-coffeeSources = ['components/coffee/tagline.coffee'];
 jsSources = [
   'components/scripts/rclick.js',
   'components/scripts/pixgrid.js',
@@ -43,14 +36,6 @@ jsSources = [
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
-jsonSources = [outputDir + 'js/*.json'];
-
-gulp.task('coffee', function() {
-  gulp.src(coffeeSources)
-    .pipe(coffee({ bare: true })
-    .on('error', gutil.log))
-    .pipe(gulp.dest('components/scripts'))
-});
 
 gulp.task('js', function() {
   gulp.src(jsSources)
@@ -74,11 +59,9 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(coffeeSources, ['coffee']);
   gulp.watch(jsSources, ['js']);
   gulp.watch('components/sass/*.scss', ['compass']);
   gulp.watch('builds/development/*.html', ['html']);
-  gulp.watch('builds/development/js/*.json', ['json']);
   gulp.watch('builds/development/images/**/*.*', ['images']);
 });
 
@@ -107,11 +90,5 @@ gulp.task('images', function() {
     .pipe(connect.reload())
 });
 
-gulp.task('json', function() {
-  gulp.src('builds/development/js/*.json')
-    .pipe(gulpif(env === 'production', jsonminify()))
-    .pipe(gulpif(env === 'production', gulp.dest('builds/production/js')))
-    .pipe(connect.reload())
-});
 
-gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'images', 'connect', 'watch']);
+gulp.task('default', ['html', 'js', 'compass', 'images', 'connect', 'watch']);

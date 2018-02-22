@@ -1,4 +1,4 @@
-# Gulp.js, Git, and Browserify
+# Gulp.js, Git, Browserify, Compass
 
 ## Installing
 1. Make sure you have these installed

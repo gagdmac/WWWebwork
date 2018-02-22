@@ -27,7 +27,6 @@ if (env==='development') {
   sassStyle = 'compressed';
 }
 
-
 jsSources = [
   'components/scripts/rclick.js',
   'components/scripts/pixgrid.js',
@@ -56,12 +55,13 @@ gulp.task('js', function() {
 gulp.task('compass', function() {
   gulp.src(sassSources)
     .pipe(compass({
+      css: outputDir + 'css',
       sass: 'components/sass',
       image: outputDir + 'images',
       style: sassStyle
     })
     .on('error', gutil.log))
-    .pipe(gulp.dest(outputDir + 'css'))
+    //.pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
 

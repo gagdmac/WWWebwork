@@ -1,4 +1,4 @@
-# Gulp.js, Git, Browserify, Compass
+# Gulp.js, Git, Browserify, Bootstrap 4.0.0, Compass and Sourcemaps
 
 ## Installing
 1. Make sure you have these installed

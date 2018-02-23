@@ -2,6 +2,9 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
+    gsass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps = require('gulp-sourcemaps'),
     connect = require('gulp-connect'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
@@ -58,10 +61,10 @@ gulp.task('compass', function() {
       css: outputDir + 'css',
       sass: 'components/sass',
       image: outputDir + 'images',
-      style: sassStyle
+      style: sassStyle,
+      sourcemap: true
     })
     .on('error', gutil.log))
-    //.pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
 

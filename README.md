@@ -1,6 +1,6 @@
 # Web repository for basic web development with Gulp.js, Git, Browserify, Compass and Sourcemaps, Fontawesome 5 and Bootstrap 4.0.0
 
-![alt text](screenshots/WWWebwork.png "basic web development")
+<img src="https://user-images.githubusercontent.com/7033253/39367772-fa23da28-4a37-11e8-8156-49013383c181.png" width="90%"></img> 
 
 ## Installing
 1. Make sure you have these installed

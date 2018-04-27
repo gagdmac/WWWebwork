@@ -1,6 +1,6 @@
 # Web repository for basic web development with Gulp.js, Git, Browserify, Compass and Sourcemaps, Fontawesome 5 and Bootstrap 4.0.0
 
-<img src="https://user-images.githubusercontent.com/7033253/39367772-fa23da28-4a37-11e8-8156-49013383c181.png" width="90%"></img> 
+<img src="https://user-images.githubusercontent.com/7033253/39367772-fa23da28-4a37-11e8-8156-49013383c181.png"></img>
 
 ## Installing
 1. Make sure you have these installed

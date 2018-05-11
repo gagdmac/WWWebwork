@@ -1,10 +1,10 @@
 {
-  "name": "WWWebwork",
+  "name": "GAGD CV REDESIGN",
   "version": "0.0.1",
-  "description": "Web workflow with Gulp, Browserify and Compass",
+  "description": "This is the new CV Version for GAGD",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gagdmac/WWWebwork.git"
+    "url": "https://github.com/gagdmac/cvonline.git"
   },
   "author": "Gabriel Garcia Diaz",
   "devDependencies": {

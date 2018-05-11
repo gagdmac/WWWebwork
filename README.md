@@ -11,3 +11,5 @@
 4. Run `> npm install` to install the project dependencies
 5. Run `> gulp` to start live preview server
 6. Run `> NODE_ENV=production gulp` to start live preview for production server
+
+## Inspired by Ray Villabolos in Web Project Workflows at lynda.com

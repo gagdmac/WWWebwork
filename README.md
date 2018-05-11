@@ -12,4 +12,7 @@
 5. Run `> gulp` to start live preview server
 6. Run `> NODE_ENV=production gulp` to start live preview for production server
 
-### Inspired by Ray Villabolos in Web Project Workflows at lynda.com
+
+### Inspired by
+
+* [Ray Villabolos](https://www.lynda.com/Web-Design-tutorials/Web-Project-Workflows-Gulp-js-Git-Browserify/154416-2.html) - Front-end development

@@ -1,10 +1,10 @@
 {
-  "name": "CV Online redesign",
+  "name": "WWWebwork",
   "version": "0.0.1",
   "description": "Web workflow with Gulp, Browserify and Compass",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gagdmac/cvonline.git"
+    "url": "https://github.com/gagdmac/WWWebwork.git"
   },
   "author": "Gabriel Garcia Diaz",
   "devDependencies": {
